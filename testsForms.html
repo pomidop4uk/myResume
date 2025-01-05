@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+</head>
+<body>
+    <style>
+        .color {
+            color: rgb(152, 64, 64)   
+        }
+        .div1 {
+            border: 2px solid rgba(41, 74, 55, 0.662);
+        }
+    </style>
+    
+    <header class="header" id="header">
+        <h2>Forms</h2>
+    </header>
+
+    <hr noshade="">
+    <h3>Text</h3>
+    <div>
+        <ol>
+            <li>
+                <p> вариант (Без ограничений)</p>
+                <label for="text">Текст</label>
+                <input type="text" id="text">
+            </li>
+            <li>
+                <p> вариант (С текстом по умолчанию)</p>
+                <label for="text1">Текст</label>
+                <input type="text" id="text1" value="Текст по умолчанию">
+            </li>
+            <li>
+                <p> вариант (С использованием 'placeholder' (серый текст на фоне))</p>
+                <label for="text2">Текст</label>
+                <input type="text" id="text2" placeholder="Text">
+            </li>
+            <li>
+                <p> вариант (Без возможности изменения, только чтение)</p>
+                <label for="text3">Текст</label>
+                <input type="text" id="text3" readonly value="Text">
+            </li>
+        </ol>
+    </div>
+    
+    <hr noshade>
+    <h3>Email</h3>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+    </div>
+    
+    <hr noshade>
+    <h3>Password</h3>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+    </div>
+    
+    <hr noshade>
+    <h3>Number</h3>
+    <ol>
+        <li>
+            <div>
+                <p> вариант (Без ограничений)</p>
+                <label for="number">Number</label>
+                <input type="number" id="number">
+            </div>
+        </li>
+        <li>
+            <div>
+                <p> вариант (С диапазоном 0-10)</p>
+                <label for="number">Number</label>
+                <input type="number" id="number" min="0" max="10">
+            </div>
+        </li>
+    </ol>
+    
+    <hr noshade>
+    <h3>Range(Ползунок)</h3>
+    <ol>
+        <li>
+            <div>
+                <p> вариант (Без ограничений)</p>
+                <label for="range">Range</label>
+                <input type="range" id="range">
+            </div>
+        </li>
+        <li>
+            <div>    
+                <p> вариант (С диапазоном 0-10, и шагом 1)</p>
+                <label for="range">Range</label>
+                <input type="range" id="range" min="0" max="10" step="1">
+            </div>
+        </li>
+    </ol>
+    
+    <hr noshade>
+    <h3>Date</h3>
+    <div>
+        <label for="date">Date</label>
+        <input type="date" id="date">
+    </div>
+    
+    <hr noshade>
+    <h3>Color</h3>
+    <div>
+        <label for="color">Color</label>
+        <input type="color" id="color">
+    </div>
+    
+    <hr noshade>
+    <h3>Message</h3>
+    <div>
+        <label for="message">Message</label>
+        <br>
+        <textarea id="message" cols="30" rows="4"></textarea>
+    </div>
+    
+    <hr noshade>
+    <h3>Sex</h3>
+    <div>
+        <label for="sex">Your gender</label>
+        <select id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="flatiron" selected>Утюг блядь</option>
+        </select>
+    </div>
+    
+    <hr noshade>
+    <h3>Radio(Choose variant (a circle))</h3>
+    <div>
+        <ol>
+            <li>
+                <p> вариант (Без ограничений(С возможностью выбрать более чем 1 вариант))
+                    <br> Поправка, radio используется как раз,
+                    <br> потому что систематически возможно выбрать только один вариант,
+                    <br> в отличии от checkbox.
+                </p>
+                <label>Count of works</label>
+                <br>
+                <input type="radio"> 0
+                <br>
+                <input type="radio"> x < 5
+                <br>
+                <input type="radio"> x > 5
+                <br>
+                <input type="radio"> 10+
+            </li>
+            <li>
+                <p> вариант (Добавлен атрибут 'name', теперь возможность выбрать только один вариант)</p>
+                <label>Count of works</label>
+                <br>
+                <input type="radio" name="count"> 0
+                <br>
+                <input type="radio" name="count"> x < 5
+                <br>
+                <input type="radio" name="count"> x > 5
+                <br>
+                <input type="radio" name="count"> 10+
+            </li>
+        </ol>
+    </div>
+    
+    <hr noshade>
+    <h3>CheckBox</h3>
+    <div>
+        <label>Favourite Food</label>
+        <br>
+        <input type="checkbox" name="food"> Eggs
+        <br>
+        <input type="checkbox" name="food"> Apple
+        <br>
+        <input type="checkbox" name="food"> Potato
+        <br>
+        <input type="checkbox" name="food"> Tomato
+    </div>
+    
+    <hr noshade>
+    <h3>Buttons</h3>
+    <div>
+        <ol>
+            <li>
+                <p> вариант (input type='submit')<br>Использовать для стандартных задач</p>
+                <input type="submit" value="Отправить форму">
+            </li>
+            <li>
+                <p> вариант (button)<br>Предпочтительние для гибкости в дизайне</p>
+                <button>Отправить форму
+                    <img src="https://www.ferra.ru/imgs/2024/05/08/05/6460496/c2150453d059e8999c5f0b211ce334f7c869147c.jpg" width="30" alt="cat">
+                </button>
+            </li>
+        </ol>
+    </div>
+    <hr size="5px" color="gray"> 
+    <h2>Различия между 'div' и 'span'</h2>
+
+    <h4 class="div1">div</h4>
+    <p>Создает новую строку. Блочный элемент</p>
+    <div class="div1">
+        <p>"Lorem ipsum dolor sit amet.<div class="color" style="border: 2px solid rgb(237, 149, 149)">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>" Minus nostrum voluptatem nobis odio! A dolore perspiciatis totam saepe fugiat eligendi!</p>
+    </div>
+    <h4 class="div1">span</h4>
+    <p>Внедряется в контент. Не создает новых строчек.</p>
+    <div class="div1">
+        <p>"Lorem ipsum dolor sit amet.<span class="color" style="border: 2px solid rgb(237, 149, 149)" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>" Rerum dolorum nam consequatur beatae laudantium repellendus fuga a? Ea, iure aliquam!</p>
+    </div>
+</body>
+</html>
